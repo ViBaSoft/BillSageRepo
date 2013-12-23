@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory><!--  name="myfirstsessionfactory"> -->
+        <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+        <property name="hibernate.connection.url">jdbc:derby://localhost:1527//testDB</property>
+        <!-- <property name="hibernate.connection.username">admin</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.default_schema">abcd</property> -->
+        <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">create</property> <!-- create-drop, drop, update -->
+        
+<!--    <property name="log4j.logger.org.hibernate.SQL">TRACE, SQL_APPENDER</property>
+        <property name="log4j.additivity.org.hibernate.SQL">false</property> -->
+        <property name="org.apache.commons.logging.simplelog.log.org.hibernate.SQL">trace</property>
+        <property name="org.apache.commons.logging.simplelog.log.org.hibernate.engine.query">trace</property>
+		<property name="org.apache.commons.logging.simplelog.log.org.hibernate.type">trace</property>
+		<property name="org.apache.commons.logging.simplelog.log.org.hibernate.jdbc">trace</property>
+        
+        
+        <mapping class="com.vbasoft.billsage.model.entity.User"/>
+        <mapping class="com.vbasoft.billsage.model.entity.Transactions"/>
+        <mapping class="com.vbasoft.billsage.model.entity.Group"/>
+    </session-factory>
+</hibernate-configuration>
+
+
+<!-- org.apache.derby.jdbc.ClientDriver -->
+<!-- ;create=true -->
