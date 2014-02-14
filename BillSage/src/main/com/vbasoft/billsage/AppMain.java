@@ -22,7 +22,14 @@ public class AppMain {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		SessionFactory buildSessionFactory = new Configuration().configure().buildSessionFactory();
+		SessionFactory buildSessionFactory = null;
+		
+		try {
+			buildSessionFactory = new Configuration().configure().buildSessionFactory();
+		} catch (Throwable ex) {
+			System.out.println("AppMain.main(): Failed to connect DB server.\n Please check server is up and running");
+			System.exit(1);
+		}
 		
 		Session session = buildSessionFactory.openSession();
 		
