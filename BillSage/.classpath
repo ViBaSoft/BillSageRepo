@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src/main"/>
-	<classpathentry kind="src" output="bin/test" path="src/test"/>
+	<classpathentry kind="src" path="source/main/java"/>
+	<classpathentry kind="src" output="target/test-classes" path="source/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/derbyDB"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spring_3.1.0_dist"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate_4_1_5"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Spring_3.2.1"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/commons-logging"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ehCache"/>
-	<classpathentry kind="output" path="bin/main"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/derbyDB"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/aspectJ"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>

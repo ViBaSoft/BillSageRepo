@@ -31,6 +31,7 @@ public class AppMain {
 			System.exit(1);
 		}
 		
+		
 		Session session = buildSessionFactory.openSession();
 		
 		Transaction tx = session.beginTransaction();
